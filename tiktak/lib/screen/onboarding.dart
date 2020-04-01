@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tiktak/animation/FadeAnimation.dart';
 import 'package:tiktak/screen/playe.dart';
 
 class Onboarding extends StatefulWidget {
@@ -18,7 +19,7 @@ class _OnboardingState extends State<Onboarding> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Center(
-              child: Row(
+              child:FadeAnimation(1,Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Text(
@@ -34,13 +35,13 @@ class _OnboardingState extends State<Onboarding> {
                     'Tak',
                     style: TextStyle(
                         letterSpacing: 5,
-                        color: Color(0xff84a9ac),
+                        color: Color(0xffcff1ef),
                         fontFamily: 'calibri',
                         fontSize: 50,
                         fontWeight: FontWeight.bold),
                   ),
                 ],
-              ),
+              )),
             ),
             SizedBox(
               height: 50,
@@ -49,7 +50,7 @@ class _OnboardingState extends State<Onboarding> {
               crossAxisAlignment: CrossAxisAlignment.end,
               mainAxisAlignment: MainAxisAlignment.end,
               children: <Widget>[
-                Container(
+                FadeAnimation(3,Container(
                   height: MediaQuery.of(context).size.height / 11,
                   width: MediaQuery.of(context).size.width / 1.2,
                   child: FlatButton(
@@ -58,7 +59,7 @@ class _OnboardingState extends State<Onboarding> {
                       'Playe',
                       style: TextStyle(
                         letterSpacing: 5,
-                        color: Color(0xff84a9ac),
+                        color: Color(0xffcff1ef),
                         fontFamily: 'calibri',
                         fontSize: 25,
                         fontWeight: FontWeight.bold
@@ -83,7 +84,7 @@ class _OnboardingState extends State<Onboarding> {
                       ),
                     ]
                   ),
-                ),
+                )),
               ],
             )
           ],

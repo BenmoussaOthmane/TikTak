@@ -11,8 +11,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
      debugShowCheckedModeBanner: false,
-      home: Playe(),
+      home: Onboarding(),
       routes: {
+        Onboarding.id : (context) => Onboarding(),
         Playe.id : (context) => Playe(),
         
       },
